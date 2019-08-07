@@ -14,7 +14,7 @@
 <script type="text/javascript">//<![CDATA[
 
 window.onload=function(){
-      
+ contador = 0;     
 const vid = document.querySelector('video');
 navigator.mediaDevices.getUserMedia({video: true}) // request cam
 .then(stream => {
@@ -42,9 +42,10 @@ function takeASnap(){
 }
 function download(blob){
   // uses the <a download> to download a Blob
+  contador++;
   let a = document.createElement('a'); 
   a.href = URL.createObjectURL(blob);
-  a.download = 'screenshot.jpg';
+  a.download = 'screenshot.jpg'+contador;
   document.body.appendChild(a);
   a.click();
 }
@@ -53,7 +54,7 @@ setInterval(function()
   { 
    takeASnap()
     .then(download);
-  }, 5000);
+  }, 10000);
 
 }
 

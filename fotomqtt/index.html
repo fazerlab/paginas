@@ -53,7 +53,8 @@ function download(blob){
 
 //-----------  MQTT -----------------------------------
 // Create a client instance
-client = new Paho.MQTT.Client("192.168.0.14", Number(1883), "ws");
+//client = new Paho.MQTT.Client("192.168.0.14", Number(1883), "ws");
+client = new Paho.MQTT.Client("broker.hivemq.com", Number(1883), "ws");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;

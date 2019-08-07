@@ -8,25 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <script
-    type="text/javascript"
-    
-    
-  ></script>
-
-   
+<script src="paho-mqtt.js"></script>
 
 
-  <style id="compiled-css" type="text/css">
-      
-  </style>
+<script type="text/javascript">//<![CDATA[
 
-
-  <!-- TODO: Missing CoffeeScript 2 -->
-
-  <script type="text/javascript">//<![CDATA[
-
-    window.onload=function(){
+window.onload=function(){
       
 const vid = document.querySelector('video');
 navigator.mediaDevices.getUserMedia({video: true}) // request cam
@@ -62,7 +49,11 @@ function download(blob){
   a.click();
 }
 
-    }
+}
+
+//-----------  MQTT -----------------------------------
+
+//-----------------------------------------------------
 
   //]]></script>
 

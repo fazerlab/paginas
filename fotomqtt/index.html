@@ -49,12 +49,18 @@ function download(blob){
   a.click();
 }
 
+setInterval(function()
+  { 
+   takeASnap()
+    .then(download);
+  }, 5000);
+
 }
 
 //-----------  MQTT -----------------------------------
 // Create a client instance
 //client = new Paho.MQTT.Client("192.168.0.14", Number(1883), "ws");
-client = new Paho.MQTT.Client("broker.hivemq.com", Number(443), "cliente123");
+/*client = new Paho.MQTT.Client("broker.hivemq.com", Number(443), "cliente123");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
@@ -82,7 +88,7 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("Msg. Recebida: "+message.payloadString);
-}
+}*/
 
 //-----------------------------------------------------
 

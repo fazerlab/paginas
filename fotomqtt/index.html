@@ -53,7 +53,7 @@ function download(blob){
 
 //-----------  MQTT -----------------------------------
 // Create a client instance
-client = new Paho.MQTT.Client("192.168.0.14", Number(1884), "ws");
+client = new Paho.MQTT.Client("192.168.0.14", Number(1883), "ws");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
@@ -89,8 +89,7 @@ function onMessageArrived(message) {
 
 </head>
 <body>
-    <button disabled>
-  take a snapshot</button>
+    <button disabled> tirar foto 1</button>
 <video></video>
 
 

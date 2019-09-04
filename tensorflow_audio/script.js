@@ -13,6 +13,8 @@ async function run() {
     predict(contex, positionx, positiony);
    }
 
+   run();
+
    function calculateNewPosition(positionx, positiony, direction)
    {
        return {
